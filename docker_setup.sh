@@ -1,7 +1,8 @@
 # DOCKER INSTALLATION
 
 # Installing required dependencies
-sudo apt-get update && apt-get install -y \
+sudo apt-get update
+sudo apt-get install -y \
     apt-transport-https \
     ca-certificates \
     curl \
@@ -18,6 +19,7 @@ sudo add-apt-repository \
    stable"
 
 # Installing docker
-sudo apt-get update && apt-get install docker-ce
+sudo apt-get update 
+sudo apt-get install -y docker-ce
 sudo docker run hello-world
 

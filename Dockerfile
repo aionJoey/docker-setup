@@ -26,10 +26,12 @@ RUN apt-get update && apt-get install -y \
 	libboost1.58-all-dev \
 && rm -rf /var/lib/apt/lists/*
 
-RUN tar -xvf jdk-10.0.1_linux-x64_bin.tar.gz
+RUN wget "http://download.oracle.com/otn-pub/java/jdk/10.0.2+13/19aef61b38124481863b1413dce1855f/jdk-10.0.2_linux-x64_bin.tar.gz"
+RUN wget http://www.us.apache.org/dist/ant/binaries/apache-ant-1.10.5-bin.tar.gz
+RUN tar -xvf jdk-10.0.2_linux-x64_bin.tar.gz
 RUN tar -xvf apache-ant-1.10.5-bin.tar.gz
 
-ENV JAVA_HOME=/usr/src/aion/jdk-10.0.1
+ENV JAVA_HOME=/usr/src/aion/jdk-10.0.2
 ENV JAVA_TOOL_OPTIONS=-Dfile.encoding=UTF8
 ENV ANT_HOME=/usr/src/aion/apache-ant-1.10.5
 ENV PATH="$ANT_HOME/bin:$JAVA_HOME/bin:$PATH"
