@@ -9,14 +9,14 @@ This repository contains the dockerized AION kernel setup files.
 
 2. Download docker-kernel
 '''
-docker pull <user>/<repository>
+docker pull _user_/_repository_
 '''
 
 3. Setup default configurations
 '''
-docker run -i -t <image>:<tag> /bin/bash
+docker run -i -t _image_:_tag_ /bin/bash
 '''
 
 4. Execute docker-kernel
 '''
-docker start -a -i <container>
+docker start -a -i _container_
