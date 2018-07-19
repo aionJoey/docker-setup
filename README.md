@@ -21,3 +21,5 @@ docker run -i -t <image>:<tag> /bin/bash
 ```
 docker start -a -i <container>
 ```
+
+** Missing JDK-10.0.1 - TOO LARGE FOR GIT **
