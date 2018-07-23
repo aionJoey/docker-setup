@@ -19,15 +19,17 @@ WORKDIR /usr/src/aion
 RUN apt-get update && apt-get install -y \
 	git \
 	g++ \
+	vim \
 	wget \
 	cmake \
 	llvm-4.0 \
+	lsb-release \
 	libjsoncpp1 \
 	libboost1.58-all-dev \
 && rm -rf /var/lib/apt/lists/*
 
-RUN wget "http://download.oracle.com/otn-pub/java/jdk/10.0.2+13/19aef61b38124481863b1413dce1855f/jdk-10.0.2_linux-x64_bin.tar.gz"
-RUN wget http://www.us.apache.org/dist/ant/binaries/apache-ant-1.10.5-bin.tar.gz
+RUN wget -nc --no-check-certificate --no-cookies --header "Cookie: oraclelicense=accept-securebackup-cookie" "http://download.oracle.com/otn-pub/java/jdk/10.0.2+13/19aef61b38124481863b1413dce1855f/jdk-10.0.2_linux-x64_bin.tar.gz"
+RUN wget "http://www.us.apache.org/dist/ant/binaries/apache-ant-1.10.5-bin.tar.gz"
 RUN tar -xvf jdk-10.0.2_linux-x64_bin.tar.gz
 RUN tar -xvf apache-ant-1.10.5-bin.tar.gz
 

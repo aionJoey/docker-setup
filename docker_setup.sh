@@ -1,5 +1,9 @@
 # DOCKER INSTALLATION
 
+# May need to logout and login
+# Enable user group
+sudo usermod -a -G docker $USER
+
 # Installing required dependencies
 sudo apt-get update
 sudo apt-get install -y \
